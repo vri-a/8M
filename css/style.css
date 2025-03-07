@@ -17,10 +17,10 @@
 }
 
 .title {
-    width: 90%;
+    width: 100%;
     height: max-content;
     padding: 1rem;
-    margin: 2.5rem;
+    margin: 2.5rem 0;
     border: 1px solid black;
     text-align: right;
     
@@ -45,9 +45,7 @@
     /* background-color: black; */
 }
 
-.card:has(.card-header):nth-of-type(odd) .card-header::before {
-    left: 10%;
-}
+
 
 
 .card-header::before {
