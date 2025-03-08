@@ -6,6 +6,10 @@
     --tertiary-color: rgb(213, 182, 214);
 }
 
+::selection {
+    background-color: var(--primary-color);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +48,7 @@
 
 .card {
     width: 90%;
-    height: 360px;
+    height: 420px;
     border-radius: 1.2rem;
     position: relative;
     background-color: #fff;
@@ -66,27 +70,27 @@
 
 /* Header */
 .card:nth-child(2) .card-header::before {
-   content: 'The First Fights (18th-19th Centuries)';
+   content: 'Las Primeras Luchas (Siglos XVIII y XIX)';
         
 }
 
 .card:nth-child(3) .card-header::before {
-    content: 'The Suffragette Movement(Late 19th – Early 20th Centuries)';
+    content: 'El Movimiento Sufragista (Finales del Siglo XIX y Principios del XX)';
         
 }
 
 .card:nth-child(4) .card-header::before {
-    content: 'The Second Wave of Feminism (1960s-1970s)';
+    content: 'La Segunda Ola del Feminismo (Décadas de 1960 y 1970)';
         
 }
 
 .card:nth-child(5) .card-header::before {
-    content: 'The Third Wave of Feminism (1980s-2000s)';
+    content: 'La Tercera Ola del Feminismo (Décadas de 1980 y 1990)';
         
 }
 
 .card:nth-child(6) .card-header::before {
-    content: 'The Current Landscape (21st Century)';
+    content: 'El Panorama Actual (Siglo XXI)';
         
 }
 
