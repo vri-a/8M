@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #ead9eb;
+    --secondary-color: #8248a3;
+    --tertiary-color: rgb(213, 182, 214);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: var(--secondary-color);
 }
 
 .container {
@@ -10,53 +20,152 @@
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center; 
     flex-direction: column;
     padding: 2rem;
-    background-color: rgb(232, 162, 232);
+    background-color: var(--primary-color);
 }
 
-.title {
-    width: 100%;
-    height: max-content;
-    padding: 1rem;
-    margin: 2.5rem 0;
-    border: 1px solid black;
-    text-align: right;
-    
-}
+
 .cards {
     width: 100%;
     height: max-content;
-    /* background-color: #7a0f5b; */
 }
-.card {
 
+.title {
+    width: 80%;
+    height: max-content;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3rem;
+    
+}
+
+.card {
     width: 90%;
-    height: 125px;
-    border-radius: 1.8rem;
+    height: 360px;
+    border-radius: 1.2rem;
     position: relative;
     background-color: #fff;
     margin-bottom: 3rem;
+
 }
 
-.card:nth-child(odd) {
+.card:nth-child(even) {
     left: 10%;
-    /* background-color: black; */
 }
 
+.card:nth-child(even) .card-header::before {
+        margin-left: 12%;      
+}
 
+.card:nth-child(odd) .card-header::before {
+    margin-left:2%;    
+}
 
+/* Header */
+.card:nth-child(2) .card-header::before {
+   content: 'The First Fights (18th-19th Centuries)';
+        
+}
+
+.card:nth-child(3) .card-header::before {
+    content: 'The Suffragette Movement(Late 19th – Early 20th Centuries)';
+        
+}
+
+.card:nth-child(4) .card-header::before {
+    content: 'The Second Wave of Feminism (1960s-1970s)';
+        
+}
+
+.card:nth-child(5) .card-header::before {
+    content: 'The Third Wave of Feminism (1980s-2000s)';
+        
+}
+
+.card:nth-child(6) .card-header::before {
+    content: 'The Current Landscape (21st Century)';
+        
+}
+
+/* Header End*/
 
 .card-header::before {
     content: "";
     width: 80%;
-    height: 2.4rem;
+    height: 3.6rem;
     position: absolute;
-    left: 20px;
-    top: -1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -1.5rem;
     border-radius: 1.2rem;
-    background-color: rgb(187, 17, 187); 
-    padding: .3rem;
-    
+    background-color: var(--tertiary-color); 
+    padding: .4rem; 
+    font-weight: 800;  
+    text-align: center;   
+    font-size: .7rem;
 }
+
+.card-content {
+    position: absolute;
+    margin-top: 3rem;
+    padding: .5rem;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.note {
+    font-size: .7rem;
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 400px) {
+    .card {
+        height: 300px;
+    }
+
+    .card-header::before {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .title {
+        width: 60%;
+    }
+
+    .card-content {
+        margin-top: 4rem;
+        font-size: 1rem;
+        
+    }
+}
+
+
+@media screen and (min-width: 850px) {
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .card {
+        height: 260px; 
+    }
+    
+    .card-header::before {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (min-width: 950px) {
+    .card-content {
+        font-size: 1.1rem;
+        
+    }
+}
+
